@@ -16,5 +16,9 @@ namespace DBapplication
         {
             InitializeComponent();
         }
+
+        private void StartForm_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
