@@ -69,12 +69,13 @@ namespace DBapplication
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            Manage_Subscriptions f = new Manage_Subscriptions();
+            f.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            TodaySubscription f = new TodaySubscription();
+            TodaySubscription f = new TodaySubscription(int.Parse(ID),BranchID);
             f.Show();
 
         }

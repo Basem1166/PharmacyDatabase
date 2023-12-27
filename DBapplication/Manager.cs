@@ -46,9 +46,9 @@ namespace DBapplication
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ApproveRefund f = new ApproveRefund();
+            ApproveRefund f = new ApproveRefund(int.Parse(ID),BranchID);
             f.Show();
-        }
+        }   
 
         private void button5_Click(object sender, EventArgs e)
         {
