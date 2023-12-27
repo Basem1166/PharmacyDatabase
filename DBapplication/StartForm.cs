@@ -19,6 +19,8 @@ namespace DBapplication
 
         private void StartForm_Load(object sender, EventArgs e)
         {
+            UPDATEMANAGER u = new UPDATEMANAGER();
+            u.Show();
         }
     }
 }

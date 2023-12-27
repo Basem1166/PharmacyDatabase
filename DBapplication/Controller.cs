@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace DBapplication
 {
@@ -65,6 +66,14 @@ namespace DBapplication
             Parameters.Add("@ADDRESS", Address);
             Parameters.Add("@PASSWORD", Password);
             Parameters.Add("@BRANCHID", BranchID);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public int updatemanager(int ID,int BranchId)
+        {
+            string SPN = StoredProcedures.UPDATEMANAGER;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SSN", ID);
+            Parameters.Add("@BRANCHID", BranchId);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
         public int deleteEmployee(int ID)

@@ -90,6 +90,12 @@
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StoredProcedures.cs" />
+    <Compile Include="UPDATEMANAGER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UPDATEMANAGER.Designer.cs">
+      <DependentUpon>UPDATEMANAGER.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UPDATEMANAGER.resx">
+      <DependentUpon>UPDATEMANAGER.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
