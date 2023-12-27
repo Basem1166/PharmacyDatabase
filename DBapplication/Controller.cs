@@ -424,6 +424,12 @@ namespace DBapplication
 
 
         }
+
+        public int expiryDiscounts()
+        {
+            string SPN = StoredProcedures.EXPIRYDISCOUNTS;
+            return dbMan.ExecuteNonQuery(SPN, null);
+        }
         /*public int CreateUser(string ID,string Name,string Salary, string Role, string PhoneNumber, string Address, string Password, string BranchID)
         {
             DateTime Time = DateTime.Now.Date;
