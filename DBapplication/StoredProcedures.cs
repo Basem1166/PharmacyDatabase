@@ -27,6 +27,12 @@ namespace DBapplication
         public static string GETEMPLOYEEID = "GETEMPLOYEEID";
         public static string GETMANAGERS = "GETMANAGERS";
         public static string GETPRODUCTIDS="GETPRODUCTIDS";
+        public static string ADDBRANCH= "AddBranch";
+        public static string DELETEBRANCH= "DeleteBranch";
+        public static string ADDCOMPLAINT= "AddComplaintOrReview";
+        public static string ADDINBODY= "AddInBody";
+        public static string APPROVEREFUND= "ApproveRefund";
+        public static string FINDPRODUCT= "FindProduct";
         public static string GETLOGINROLE = "GETLOGINROLE";
     }
 }
