@@ -405,6 +405,15 @@ namespace DBapplication
 
 
         }
+        public int GetBranchID(string ID)
+        {
+            string SPN = StoredProcedures.GETBRANCHID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+
+            Parameters.Add("@EmployeeID", ID);
+            return (int)dbMan.ExecuteScalar(SPN, Parameters);
+
+        }
         /*public int CreateUser(string ID,string Name,string Salary, string Role, string PhoneNumber, string Address, string Password, string BranchID)
         {
             DateTime Time = DateTime.Now.Date;

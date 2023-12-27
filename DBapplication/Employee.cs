@@ -14,11 +14,15 @@ namespace DBapplication
     {
         StartForm SF;
         string ID;
+        int BranchID;
+        Controller controllerobj;
         public Employee(StartForm sf, string iD)
         {
             InitializeComponent();
             SF = sf;
             ID = iD;
+            controllerobj = new Controller();
+            BranchID = controllerobj.GetBranchID(ID);
         }
 
         private void button1_Click(object sender, EventArgs e)
