@@ -22,6 +22,8 @@ namespace DBapplication
 
         private void StartForm_Load(object sender, EventArgs e)
         {
+            TodaySubscription subscription = new TodaySubscription();
+            subscription.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)

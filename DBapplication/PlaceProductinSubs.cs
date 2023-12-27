@@ -68,7 +68,7 @@ namespace DBapplication
                 }
                 else
                 {
-                    MessageBox.Show("No enough quantity");
+                    MessageBox.Show("No enough quantity there is only:" + q);
                     textBox1.Clear();
                 }
             }
@@ -128,7 +128,7 @@ namespace DBapplication
                 }
                 else
                 {
-                    MessageBox.Show("No enough quantity");
+                    MessageBox.Show("No enough quantity there is only:"+ q);
                     textBox1.Clear();
                 }
             }
