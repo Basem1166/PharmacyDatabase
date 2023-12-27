@@ -84,6 +84,24 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, null);
 
         }
+
+        public DataTable newSubscriptions()
+        {
+            string SPN = StoredProcedures.NEWSUBSCIRBERS;
+            return dbMan.ExecuteReader(SPN, null);
+        }
+
+        public DataTable newCustomers()
+        {
+            string SPN = StoredProcedures.NEWCUSTOMERS;
+            return dbMan.ExecuteReader(SPN, null);
+        }
+
+        public DataTable totalEmployees()
+        {
+            string SPN = StoredProcedures.TOTALEMPLOYEES;
+            return dbMan.ExecuteReader(SPN, null);
+        }
         public DataTable getbatchids(int branchid)
         {
             string SPN = StoredProcedures.GETBATCHIDS;
@@ -245,6 +263,7 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, Parameters);
 
         }
+
         public int insertEmployee(int ID, string Name, float Salary, string Role, string phone, string Address, string Password, int BranchID)
         {
             string SPN = StoredProcedures.ADDEMPLOYEE;
