@@ -22,8 +22,7 @@ namespace DBapplication
 
         private void StartForm_Load(object sender, EventArgs e)
         {
-            UpdatePrice u = new UpdatePrice();
-            u.Show();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -48,15 +47,21 @@ namespace DBapplication
                 Thread.Sleep(500);
                 if (ret == "Manager   ")
                 {
-                    //start manager form
+                    Manager m = new Manager(this);
+                    m.Show();
+                    this.Hide();
                 }
                 else if (ret == "TopManager")
                 {
-                    // start topmanager form
+                    TopManager tm = new TopManager(this);
+                    tm.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    //start employee form
+                    Employee em = new Employee(this);
+                    em.Show();
+                    this.Hide();
                 }
             }
 
