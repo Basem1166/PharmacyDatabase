@@ -33,7 +33,7 @@ namespace DBapplication
 
         private void button7_Click(object sender, EventArgs e)
         {
-            PlaceOrder f = new PlaceOrder();
+            PlaceOrder f = new PlaceOrder(int.Parse(ID), BranchID);
             f.Show();
         }
 
