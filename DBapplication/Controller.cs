@@ -6,6 +6,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
+using System.Xml.Linq;
 
 namespace DBapplication
 {
@@ -46,6 +47,101 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, null);
 
         }
+        public DataTable getcustomerID()
+        {
+            string SPN = StoredProcedures.GETCUSTOMERIDS;
+            return dbMan.ExecuteReader(SPN, null);
+
+        }
+        public DataTable getemployees()
+        {
+            string SPN = StoredProcedures.GETEMPLOYEES;
+            return dbMan.ExecuteReader(SPN, null);
+
+        }
+        public DataTable getbatchids(int branchid)
+        {
+            string SPN = StoredProcedures.GETBATCHIDS;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@BRANCHID", branchid);
+            return dbMan.ExecuteReader(SPN, Parameters);
+
+        }
+        public int addorder(int OrderID,int EmployeeID , int CustomerID)
+        {
+            string SPN = StoredProcedures.ADDORDER;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ORDERID", OrderID);
+            Parameters.Add("@EMPLOYEEID", EmployeeID);
+            Parameters.Add("@CUSTOMERID", CustomerID);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public int addproductinorder(int OrderID, int BatchID, int Quantity)
+        {
+            string SPN = StoredProcedures.ADDPRODUCTINORDER;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ORDERID", OrderID);
+            Parameters.Add("@BATCHID", BatchID);
+            Parameters.Add("@QUANTITY", Quantity);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public object getbdao(int OrderID)
+        {
+            string SPN = StoredProcedures.GETBDAO;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ORDERID", OrderID);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(SPN, Parameters));
+            return x;
+        }
+        public object getbd(int OrderID)
+        {
+            string SPN = StoredProcedures.GETBD;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ORDERID", OrderID);
+            int x=Convert.ToInt32(dbMan.ExecuteScalar(SPN, Parameters));
+            return x;
+        }
+        public object getafter(int OrderID)
+        {
+            string SPN = StoredProcedures.GETTOTAL;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ORDERID", OrderID);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(SPN, Parameters));
+            return x;
+        }
+        public DataTable getproductsinorder(int OrderID)
+        {
+            string SPN = StoredProcedures.VIEWPRODUCTSINORDER;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ORDERID", OrderID);
+            return dbMan.ExecuteReader(SPN, Parameters);
+        }
+        public object getQUANTITY(int BatchID)
+        {
+            string SPN = StoredProcedures.GETQUANTITY;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@BATCHID", BatchID);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(SPN, Parameters));
+            return x;
+        }
+        public object gettier(int CustomerID)
+        {
+            string SPN = StoredProcedures.GETTIER;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CUSTOMERID", CustomerID);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(SPN, Parameters));
+            return x;
+        }
+        public int calculateorder(int  OrderID,int customerID,ref int BDAO,ref int  BD,ref int A) {
+            string SPN = StoredProcedures.CALCULATETOTAL;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ORDERID", OrderID);
+            Parameters.Add("@CUSTOMERID", customerID);
+            Parameters.Add("@BEFOREDISCOUNTSANDOFFER", BDAO);
+            Parameters.Add("@BEFOREDISCOUNTS", BD);
+            Parameters.Add("@AFTER", A);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        } 
         public int insertEmployee(int ID, string Name, float Salary, string Role, string phone, string Address, string Password, int BranchID)
         {
             string SPN = StoredProcedures.ADDEMPLOYEE;
@@ -88,6 +184,13 @@ namespace DBapplication
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@PID", PID);
             Parameters.Add("@NEWPRICE", Price);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public int upgradetier(int CustomerID)
+        {
+            string SPN = StoredProcedures.UPGRADETIER;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@CUSTOMERID", CustomerID);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
         public int deleteEmployee(int ID)

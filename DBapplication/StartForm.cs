@@ -19,7 +19,7 @@ namespace DBapplication
 
         private void StartForm_Load(object sender, EventArgs e)
         {
-            UpdatePrice u = new UpdatePrice();
+            PlaceOrder u = new PlaceOrder();
             u.Show();
         }
     }

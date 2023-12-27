@@ -67,6 +67,12 @@
     <Compile Include="AddManager.Designer.cs">
       <DependentUpon>AddManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Addproducttoorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addproducttoorder.Designer.cs">
+      <DependentUpon>Addproducttoorder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="FireEmployee.cs">
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="FireManager.Designer.cs">
       <DependentUpon>FireManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaceOrder.Designer.cs">
+      <DependentUpon>PlaceOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +114,12 @@
     <Compile Include="UpdatePrice.Designer.cs">
       <DependentUpon>UpdatePrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewProductsInOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProductsInOrder.Designer.cs">
+      <DependentUpon>ViewProductsInOrder.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,11 +129,17 @@
     <EmbeddedResource Include="AddManager.resx">
       <DependentUpon>AddManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Addproducttoorder.resx">
+      <DependentUpon>Addproducttoorder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FireEmployee.resx">
       <DependentUpon>FireEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FireManager.resx">
       <DependentUpon>FireManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaceOrder.resx">
+      <DependentUpon>PlaceOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePrice.resx">
       <DependentUpon>UpdatePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProductsInOrder.resx">
+      <DependentUpon>ViewProductsInOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

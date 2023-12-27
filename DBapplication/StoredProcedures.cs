@@ -27,5 +27,13 @@ namespace DBapplication
         public static string GETEMPLOYEEID = "GETEMPLOYEEID";
         public static string GETMANAGERS = "GETMANAGERS";
         public static string GETPRODUCTIDS="GETPRODUCTIDS";
+        public static string GETCUSTOMERIDS = "GETCUSTOMERIDS";
+        public static string GETEMPLOYEES = "GETEMPLOYEES";
+        public static string GETBATCHIDS = "GETBATCHIDS";
+        public static string GETBDAO = "GETBDAO";
+        public static string GETBD = "GETBD";
+        public static string CALCULATETOTAL = "CALCULATETOTAL";
+        public static string GETTIER = "GETTIER";
+        public static string GETQUANTITY = "GETQUANTITY";
     }
 }
