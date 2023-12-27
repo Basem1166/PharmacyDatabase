@@ -6,6 +6,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
+using System.Net;
 
 namespace DBapplication
 {
@@ -17,7 +18,7 @@ namespace DBapplication
             dbMan = new DBManager();
         }
 
-      
+
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
@@ -72,6 +73,9 @@ namespace DBapplication
         public int insertmanager(int ID, string Name, float Salary, string Role, string phone, string Address, string Password, int BranchID)
         {
             string SPN = StoredProcedures.ADDMANAGER;
+  
+
+
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@EMPLOYEEID", ID);
             Parameters.Add("@EMPLOYEENAME", Name);
@@ -80,10 +84,13 @@ namespace DBapplication
             Parameters.Add("@PHONENUMBER", phone);
             Parameters.Add("@ADDRESS", Address);
             Parameters.Add("@PASSWORD", Password);
-            Parameters.Add("@BRANCHID", BranchID);
+            if (BranchID != 0)
+                Parameters.Add("@BRANCHID", BranchID);
+            else
+                Parameters.Add("@BRANCHID", Convert.DBNull);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
-        public int updatemanager(int ID,int BranchId)
+        public int updatemanager(int ID, int BranchId)
         {
             string SPN = StoredProcedures.UPDATEMANAGER;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -113,7 +120,7 @@ namespace DBapplication
             Parameters.Add("@SSN", ID);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
-        public int insertcustomer(int ID,string name,string address,string phonenumber)
+        public int insertcustomer(int ID, string name, string address, string phonenumber)
         {
             string SPN = StoredProcedures.ADDCUSTOMER;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -123,7 +130,7 @@ namespace DBapplication
             Parameters.Add("@PHONENUMBER", phonenumber);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
-        public string Login(string ID, string Password )
+        public string Login(string ID, string Password)
         {
             string SPN = StoredProcedures.GETLOGINROLE;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -178,7 +185,6 @@ namespace DBapplication
             Parameters.Add("@CustomerID", cusotmerID);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
-
         public int approveRefund(int orderID, string description, int employeeID)
         {
             string SPN = StoredProcedures.APPROVEREFUND;
@@ -189,5 +195,33 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
 
+        /*public int CreateUser(string ID,string Name,string Salary, string Role, string PhoneNumber, string Address, string Password, string BranchID)
+        {
+            DateTime Time = DateTime.Now.Date;
+            string SPN = StoredProcedures.ADDNEWUSER;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@EmployeeID", ID);
+            Parameters.Add("@EmployeeName", Name);
+            Parameters.Add("@Salary", Salary);
+            Parameters.Add("@Role", Role);
+            Parameters.Add("@PhoneNumber", PhoneNumber);
+            Parameters.Add("@Address", Address);
+            Parameters.Add("@Password", Password);
+            Parameters.Add("@Date", Time);
+
+
+        }*/
+        /*EmployeeID INT = NULL,
+/*@EmployeeName NCHAR(30),
+@Salary FLOAT,
+@Role NCHAR(10),
+@PhoneNumber NCHAR(11),
+@Address NCHAR(300),
+@Password NCHAR(10),
+@BranchID INT,
+@Date DATE,
+@Result INT OUTPUT
+
+}*/
     }
 }

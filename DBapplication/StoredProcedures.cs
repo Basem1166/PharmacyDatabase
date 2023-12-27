@@ -34,5 +34,6 @@ namespace DBapplication
         public static string APPROVEREFUND= "ApproveRefund";
         public static string FINDPRODUCT= "FindProduct";
         public static string GETLOGINROLE = "GETLOGINROLE";
+        public static string ADDNEWUSER = "ADDNEWUSER";
     }
 }
