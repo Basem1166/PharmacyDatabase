@@ -54,7 +54,6 @@ namespace DBapplication
                 return 0;
             }
         }
-
         public DataTable ExecuteReader(string storedProcedureName, Dictionary<string, object> parameters)
         {
             try
