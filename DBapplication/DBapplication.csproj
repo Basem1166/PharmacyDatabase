@@ -97,6 +97,12 @@
     <Compile Include="Addproducttoorder.Designer.cs">
       <DependentUpon>Addproducttoorder.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="CreateEmployee.cs">
       <SubType>Form</SubType>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApproveRefund.resx">
       <DependentUpon>ApproveRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateManager.resx">
       <DependentUpon>CreateManager.cs</DependentUpon>

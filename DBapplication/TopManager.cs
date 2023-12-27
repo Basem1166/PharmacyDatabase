@@ -13,10 +13,12 @@ namespace DBapplication
     public partial class TopManager : Form
     {
         StartForm SF;
-        public TopManager(StartForm sf)
+        string ID;
+        public TopManager(StartForm sf, string iD)
         {
             InitializeComponent();
             SF = sf;
+            ID = iD;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,6 +74,12 @@ namespace DBapplication
             UPDATEMANAGER f = new UPDATEMANAGER();
             f.Show();
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ChangePassword f = new ChangePassword(ID);
+            f.Show();
         }
     }
 }

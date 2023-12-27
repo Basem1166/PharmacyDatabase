@@ -34,6 +34,7 @@ namespace DBapplication
         {
             string password = textBox2.Text;
             string ID = textBox1.Text;
+            textBox2.Clear();
             
             string ret = controllerobj.Login(ID,password);
 
@@ -47,19 +48,19 @@ namespace DBapplication
                 Thread.Sleep(500);
                 if (ret == "Manager   ")
                 {
-                    Manager m = new Manager(this);
+                    Manager m = new Manager(this,ID);
                     m.Show();
                     this.Hide();
                 }
                 else if (ret == "TopManager")
                 {
-                    TopManager tm = new TopManager(this);
+                    TopManager tm = new TopManager(this,ID);
                     tm.Show();
                     this.Hide();
                 }
                 else
                 {
-                    Employee em = new Employee(this);
+                    Employee em = new Employee(this,ID);
                     em.Show();
                     this.Hide();
                 }
