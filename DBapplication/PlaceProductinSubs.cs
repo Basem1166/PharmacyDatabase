@@ -7,47 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace DBapplication
 {
-    public partial class Addproducttoorder : Form
+    public partial class PlaceProductinSubs : Form
     {
         Controller controllerObj;
+        public int subscriptionid { get; set; }
         public int orderid { get; set; }
         public int customerid { get; set; }
 
-        public int branchid { get; set; }
-        public Addproducttoorder()
+        public PlaceProductinSubs()
         {
             InitializeComponent();
             controllerObj = new Controller();
         }
 
-        private void Addproducttoorder_Load(object sender, EventArgs e)
+        private void PlaceProductinSubs_Load(object sender, EventArgs e)
         {
             label3.Hide();
-            comboBox1.DataSource=controllerObj.getbatchids(branchid);
-            comboBox1.DisplayMember= "BatchID";
-            comboBox1.ValueMember = "BatchID";
-            DataTable dt = controllerObj.getbatchids(branchid);
+            comboBox1.DataSource = controllerObj.getProductsinsub(subscriptionid);
+            comboBox1.DisplayMember = "PID";
+            comboBox1.ValueMember = "PID";
+            DataTable dt = controllerObj.getProductsinsub(subscriptionid);
             dataGridView1.DataSource = dt;
             dataGridView1.Refresh();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             label3.Hide();
-            bool c = true; 
+            bool c = true;
             int x = 0;
             if (textBox1.Text == "")
             {
                 label3.Show();
-                c= false;
+                c = false;
             }
             else
             {
@@ -59,17 +55,15 @@ namespace DBapplication
             }
             if (c)
             {
-                int q = (int)controllerObj.getQUANTITY(Convert.ToInt32( comboBox1.SelectedValue));
+                int q1 = (int)controllerObj.getsbatchid(Convert.ToInt32(comboBox1.SelectedValue));
+                int q = (int)controllerObj.getQUANTITY(q1);
                 if (q > x)
                 {
-                    int f = controllerObj.addproductinorder(orderid, Convert.ToInt32(comboBox1.SelectedValue), x);
-                    if (f == 2)
+                    int f = controllerObj.addproductinsubs(orderid, Convert.ToInt32(comboBox1.SelectedValue), x);
+                    if (f !=0)
                     {
                         MessageBox.Show("Added");
                         textBox1.Clear();
-                        DataTable dt = controllerObj.getbatchids(branchid);
-                        dataGridView1.DataSource = dt;
-                        dataGridView1.Refresh();
                     }
                 }
                 else
@@ -100,13 +94,14 @@ namespace DBapplication
             }
             if (c)
             {
-                int q = (int)controllerObj.getQUANTITY(Convert.ToInt32(comboBox1.SelectedValue));
+                int q1 = (int)controllerObj.getsbatchid(Convert.ToInt32(comboBox1.SelectedValue));
+                int q = (int)controllerObj.getQUANTITY(q1);
                 if (q > x)
                 {
-                    int f = controllerObj.addproductinorder(orderid, Convert.ToInt32(comboBox1.SelectedValue), x);
+                    int f = controllerObj.addproductinsubs(orderid, Convert.ToInt32(comboBox1.SelectedValue), x);
                     if (f != 0)
                     {
-                        ViewProductsInOrder v=new ViewProductsInOrder();
+                        ViewProductsInOrder v = new ViewProductsInOrder();
                         v.orderid = orderid;
                         v.Show();
                         MessageBox.Show("Order Placed");
@@ -123,12 +118,9 @@ namespace DBapplication
                             int tier = (int)controllerObj.gettier(customerid);
                             int f3 = controllerObj.upgradetier(customerid);
                             int tier2 = (int)controllerObj.gettier(customerid);
-                            DataTable dt = controllerObj.getbatchids(branchid);
-                            dataGridView1.DataSource = dt;
-                            dataGridView1.Refresh();
                             if (tier2 != tier)
                             {
-                                
+
                                 MessageBox.Show("Congratulations the of the customer is now upgraded to tier: " + tier2);
                             }
                         }
@@ -138,31 +130,8 @@ namespace DBapplication
                 {
                     MessageBox.Show("No enough quantity");
                     textBox1.Clear();
-                    DataTable dt = controllerObj.getbatchids(branchid);
-                    dataGridView1.DataSource = dt;
-                    dataGridView1.Refresh();
                 }
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -36,6 +36,18 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, null);
 
         }
+        public DataTable getpID()
+        {
+            string SPN = StoredProcedures.GETPIDS;
+            return dbMan.ExecuteReader(SPN, null);
+
+        }
+        public DataTable getSubscriptionID()
+        {
+            string SPN = StoredProcedures.GETTODAYSUBSCRIPTION;
+            return dbMan.ExecuteReader(SPN, null);
+
+        }
         public DataTable getmanagers()
         {
             string SPN = StoredProcedures.GETMANAGERS;
@@ -45,6 +57,18 @@ namespace DBapplication
         public DataTable getproductids()
         {
             string SPN = StoredProcedures.GETPRODUCTIDS;
+            return dbMan.ExecuteReader(SPN, null);
+
+        }
+        public DataTable get1subs()
+        {
+            string SPN = StoredProcedures.GET1SUBS;
+            return dbMan.ExecuteReader(SPN, null);
+
+        }
+        public DataTable get0subs()
+        {
+            string SPN = StoredProcedures.GET0SUBS;
             return dbMan.ExecuteReader(SPN, null);
 
         }
@@ -68,6 +92,39 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, Parameters);
 
         }
+        public DataTable getProductsinsub(int subscriptionid)
+        {
+            string SPN = StoredProcedures.GETPRODUCTSINSUBS;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SUBSCRIPTIONID", subscriptionid);
+            return dbMan.ExecuteReader(SPN, Parameters);
+
+        }
+        public int deactivatesub(int subscriptionid)
+        {
+            string SPN = StoredProcedures.DEACTIVATESUBS;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SUBSCRIPTIONID", subscriptionid);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+
+        }
+        public int activatesub(int subscriptionid)
+        {
+            string SPN = StoredProcedures.ACTIVATESUBS;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SUBSCRIPTIONID", subscriptionid);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+
+        }
+        public object getcusinsubs(int subscriptionid)
+        {
+            string SPN = StoredProcedures.GETCUSOFAUBS;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SUBSCRIPTIONID", subscriptionid);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(SPN, Parameters));
+            return x;
+
+        }
         public int addorder(int OrderID,int EmployeeID , int CustomerID)
         {
             string SPN = StoredProcedures.ADDORDER;
@@ -75,6 +132,25 @@ namespace DBapplication
             Parameters.Add("@ORDERID", OrderID);
             Parameters.Add("@EMPLOYEEID", EmployeeID);
             Parameters.Add("@CUSTOMERID", CustomerID);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public int addsubscription(int SubscriptionID, int Interval,int Active, int CustomerID)
+        {
+            string SPN = StoredProcedures.ADDSUBSCRIPTION;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SUBSCRIPTIONID", SubscriptionID);
+            Parameters.Add("@INTERVAL", Interval);
+            Parameters.Add("@ACTIVE", Interval);
+            Parameters.Add("@CUSTOMERID", CustomerID);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public int addproductinsubscription(int PID, int subscriptionID, int Quantity)
+        {
+            string SPN = StoredProcedures.ADDPRODUCTINSUBSCRIPTION;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", PID);
+            Parameters.Add("@SUBSCRIPTIONID", subscriptionID);
+            Parameters.Add("@QUANTITY", Quantity);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
         public int addproductinorder(int OrderID, int BatchID, int Quantity)
@@ -85,6 +161,23 @@ namespace DBapplication
             Parameters.Add("@BATCHID", BatchID);
             Parameters.Add("@QUANTITY", Quantity);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public int addproductinsubs(int OrderID, int PID, int Quantity)
+        {
+            string SPN = StoredProcedures.ADDPRODUCTINORDERSUBS;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ORDERID", OrderID);
+            Parameters.Add("@PID", PID);
+            Parameters.Add("@QUANTITY", Quantity);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public object getsbatchid(int PID)
+        {
+            string SPN = StoredProcedures.GETSBATCHID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", PID);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(SPN, Parameters));
+            return x;
         }
         public object getbdao(int OrderID)
         {
