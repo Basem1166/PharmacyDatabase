@@ -42,5 +42,15 @@ namespace DBapplication
         public static string CALCULATETOTAL = "CALCULATETOTAL";
         public static string GETTIER = "GETTIER";
         public static string GETQUANTITY = "GETQUANTITY";
+        public static string GETPIDS = "GETPIDS";
+        public static string GETTODAYSUBSCRIPTION = "GETTODAYSUBSCRIPTION";
+        public static string GETPRODUCTSINSUBS = "GETPRODUCTSINSUBS";
+        public static string ADDPRODUCTINORDERSUBS = "ADDPRODUCTINORDERSUBS";
+        public static string GETSBATCHID = "GETSBATCHID";
+        public static string GETCUSOFAUBS = "GETCUSOFAUBS";
+        public static string GET0SUBS = "GET0SUBS";
+        public static string GET1SUBS = "GET1SUBS";
+        public static string DEACTIVATESUBS = "DEACTIVATESUBS";
+        public static string ACTIVATESUBS = "ACTIVATESUBS";
     }
 }

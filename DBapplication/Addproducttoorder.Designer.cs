@@ -46,6 +46,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(143, 24);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
@@ -63,6 +64,7 @@
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "BatchID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -72,6 +74,7 @@
             this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Quantity";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -81,6 +84,7 @@
             this.label3.Size = new System.Drawing.Size(133, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "The quantity is empty";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 

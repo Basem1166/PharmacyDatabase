@@ -57,7 +57,7 @@ namespace DBapplication
             {
                 if (!int.TryParse(textBox1.Text, out x))
                 {
-                    MessageBox.Show("The price has to be a number");
+                    MessageBox.Show("The OrderID has to be a number");
                     c = false;
                 }
             }
