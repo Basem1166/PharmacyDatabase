@@ -10,46 +10,26 @@ using System.Windows.Forms;
 
 namespace DBapplication
 {
-    public partial class AddEmployee : Form
+    public partial class AddManager : Form
     {
         Controller controllerObj;
-        public AddEmployee()
+        public AddManager()
         {
             InitializeComponent();
             controllerObj = new Controller();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddEmployee_Load(object sender, EventArgs e)
+        private void AddManager_Load(object sender, EventArgs e)
         {
             label9.Hide();
-            label10.Hide(); 
+            label10.Hide();
             label11.Hide();
             label12.Hide();
-            label13.Hide(); 
+            label13.Hide();
             label14.Hide();
             label15.Hide();
-            comboBox1.DataSource=controllerObj.getbranchID();
-            comboBox1.DisplayMember= "BranchID";
+            comboBox1.DataSource = controllerObj.getbranchID();
+            comboBox1.DisplayMember = "BranchID";
             comboBox1.ValueMember = "BranchID";
         }
 
@@ -63,7 +43,7 @@ namespace DBapplication
             label14.Hide();
             label15.Hide();
             bool c = true;
-            int x = 0, z;
+            int x=0, z;
             float y = 0;
             if (textBox1.Text == "")
             {
@@ -74,7 +54,7 @@ namespace DBapplication
             {
                 if (!int.TryParse(textBox1.Text, out x))
                 {
-                    MessageBox.Show("The Employee ID has to be an integer");
+                    MessageBox.Show("The Manager ID has to be an integer");
                     c = false;
                 }
             }
@@ -140,16 +120,16 @@ namespace DBapplication
                     c = false;
                 }
             }
-
             if (c)
             {
-                int f=controllerObj.insertEmployee(x, textBox2.Text, y, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, Convert.ToInt32(comboBox1.SelectedValue));
-                if (f == 1)
+                int f = controllerObj.insertmanager(x, textBox2.Text, y, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, Convert.ToInt32(comboBox1.SelectedValue));
+                if (f == 2)
+                {
                     MessageBox.Show("Done");
+                }
                 else
-                    MessageBox.Show("This ID is already existing");
+                    MessageBox.Show("This ID is already existing ");
             }
-              
         }
     }
 }

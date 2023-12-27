@@ -25,6 +25,6 @@ namespace DBapplication
         public static string UPDATEOFFER = "UPDATEOFFER";
         public static string GETBRANCHIDS = "GETBRANCHIDS";
         public static string GETEMPLOYEEID = "GETEMPLOYEEID";
-
+        public static string GETMANAGERS = "GETMANAGERS";
     }
 }

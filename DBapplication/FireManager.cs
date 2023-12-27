@@ -10,40 +10,30 @@ using System.Windows.Forms;
 
 namespace DBapplication
 {
-    public partial class FireEmployee : Form
+    public partial class FireManager : Form
     {
         Controller controllerObj;
-        public FireEmployee()
+        public FireManager()
         {
             InitializeComponent();
             controllerObj = new Controller();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void FireManager_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void FireEmployee_Load(object sender, EventArgs e)
-        {
-            comboBox1.DataSource = controllerObj.getemployeeID();
+            comboBox1.DataSource = controllerObj.getmanagers();
             comboBox1.DisplayMember = "EmployeeId";
             comboBox1.ValueMember = "EmployeeId";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int f=controllerObj.deleteEmployee(Convert.ToInt32(comboBox1.SelectedValue));
-            if(f==1)
+            int f = controllerObj.deletemanager(Convert.ToInt32(comboBox1.SelectedValue));
+            if (f == 1)
                 MessageBox.Show("Done");
-            comboBox1.DataSource = controllerObj.getemployeeID();
+            comboBox1.DataSource = controllerObj.getmanagers();
             comboBox1.DisplayMember = "EmployeeId";
             comboBox1.ValueMember = "EmployeeId";
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
