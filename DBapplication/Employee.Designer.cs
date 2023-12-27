@@ -35,6 +35,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -106,11 +109,44 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(334, 145);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(165, 52);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Add Subscriptions";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(334, 227);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(165, 52);
+            this.button9.TabIndex = 14;
+            this.button9.Text = "Manage Subscription";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(334, 318);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(165, 52);
+            this.button10.TabIndex = 15;
+            this.button10.Text = "Check Today Subscriptions";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -133,5 +169,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }

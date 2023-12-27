@@ -56,5 +56,23 @@ namespace DBapplication
             ChangePassword f = new ChangePassword(ID);
             f.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddSubscription f = new AddSubscription();
+            f.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            TodaySubscription f = new TodaySubscription();
+            f.Show();
+
+        }
     }
 }

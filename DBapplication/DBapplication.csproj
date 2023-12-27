@@ -122,12 +122,6 @@
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
-    <Compile Include="CreateEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateEmployee.Designer.cs">
-      <DependentUpon>CreateEmployee.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +164,12 @@
     </Compile>
     <Compile Include="FireManager.Designer.cs">
       <DependentUpon>FireManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Subscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Subscriptions.Designer.cs">
+      <DependentUpon>Manage Subscriptions.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs">
       <SubType>Form</SubType>
@@ -284,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FireManager.resx">
       <DependentUpon>FireManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Subscriptions.resx">
+      <DependentUpon>Manage Subscriptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
