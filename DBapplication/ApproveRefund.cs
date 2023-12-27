@@ -13,10 +13,14 @@ namespace DBapplication
     public partial class ApproveRefund : Form
     {
         Controller controllerObj;
-        public ApproveRefund()
+        public int emid { get; set; }
+        public int brid { get; set; }
+        public ApproveRefund(int employeeid, int branchid)
         {
             InitializeComponent();
             controllerObj = new Controller();
+            emid = employeeid;
+            brid = branchid;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,7 +37,7 @@ namespace DBapplication
             try { employeeID = int.Parse(EmployeeIDTextBox.Text); }
             catch { MessageBox.Show("Enter a Valid Employee ID"); return; }
 
-            int check = controllerObj.approveRefund(orderID, DescriptionTextBox.Text, employeeID);
+            int check = controllerObj.approveRefund(orderID, DescriptionTextBox.Text, emid);
             if (check == 0) { MessageBox.Show("Refund not approved. Make sure all the data entered were valid."); }
             else
             {
@@ -42,6 +46,11 @@ namespace DBapplication
                 DescriptionTextBox.Text = "";
                 EmployeeIDTextBox.Text = "";
             }
+        }
+
+        private void ApproveRefund_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

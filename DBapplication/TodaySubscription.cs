@@ -14,10 +14,14 @@ namespace DBapplication
     public partial class TodaySubscription : Form
     {
         Controller controllerObj;
-        public TodaySubscription()
+        public int emid { get; set; }
+        public int brid { get; set; }
+        public TodaySubscription(int employeeid, int branchid)
         {
             InitializeComponent();
             controllerObj = new Controller();
+            emid = employeeid;
+            brid = branchid;
         }
 
         private void TodaySubscription_Load(object sender, EventArgs e)
@@ -53,7 +57,7 @@ namespace DBapplication
             {
                 int subscriptionid= Convert.ToInt32(comboBox1.SelectedValue);
                 int cusid = (int)controllerObj.getcusinsubs(subscriptionid);
-                int f = controllerObj.addorder(x, Convert.ToInt32(comboBox2.SelectedValue),cusid );
+                int f = controllerObj.addorder(x, emid,cusid );
                 if (f != 0)
                 {
                     PlaceProductinSubs p = new PlaceProductinSubs();
