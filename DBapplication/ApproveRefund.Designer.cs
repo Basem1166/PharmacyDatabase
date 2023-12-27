@@ -28,30 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.EmployeeIDTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.OrderIDTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 204);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 16);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "EmployeeID:";
-            // 
-            // EmployeeIDTextBox
-            // 
-            this.EmployeeIDTextBox.Location = new System.Drawing.Point(152, 201);
-            this.EmployeeIDTextBox.Name = "EmployeeIDTextBox";
-            this.EmployeeIDTextBox.Size = new System.Drawing.Size(100, 22);
-            this.EmployeeIDTextBox.TabIndex = 22;
             // 
             // label2
             // 
@@ -102,8 +84,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.EmployeeIDTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DescriptionTextBox);
@@ -117,9 +97,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox EmployeeIDTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox DescriptionTextBox;

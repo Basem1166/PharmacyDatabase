@@ -36,15 +36,9 @@ namespace DBapplication
         private void PlaceOrder_Load(object sender, EventArgs e)
         {
             label4.Hide();
-            comboBox1.DataSource = controllerObj.getemployees();
-            comboBox1.DisplayMember = "EmployeeId";
-            comboBox1.ValueMember = "EmployeeId";
             comboBox2.DataSource = controllerObj.getcustomerID();
             comboBox2.DisplayMember = "CustomerID";
             comboBox2.ValueMember = "CustomerID";
-            comboBox3.DataSource = controllerObj.getbranchID();
-            comboBox3.DisplayMember = "BranchID";
-            comboBox3.ValueMember = "BranchID";
         }
 
         private void button1_Click(object sender, EventArgs e)

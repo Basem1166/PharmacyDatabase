@@ -27,9 +27,6 @@ namespace DBapplication
         private void TodaySubscription_Load(object sender, EventArgs e)
         {
             label3.Hide();
-            comboBox2.DataSource = controllerObj.getemployees();
-            comboBox2.DisplayMember = "EmployeeId";
-            comboBox2.ValueMember = "EmployeeId";
             comboBox1.DataSource=controllerObj.getSubscriptionID();
             comboBox1.DisplayMember="SubscriptionID";
             comboBox1.ValueMember = "SubscriptionID";

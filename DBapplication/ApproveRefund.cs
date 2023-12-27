@@ -25,17 +25,15 @@ namespace DBapplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(OrderIDTextBox.Text == "" || DescriptionTextBox.Text == "" || EmployeeIDTextBox.Text == "")
+            if(OrderIDTextBox.Text == "" || DescriptionTextBox.Text == "" )
             {
                 MessageBox.Show("Please enter all the information");
                 return;
             }
-            int orderID, employeeID;
+            int orderID;
             try { orderID = int.Parse(OrderIDTextBox.Text); }
             catch { MessageBox.Show("Enter a Valid Order ID"); return; }
 
-            try { employeeID = int.Parse(EmployeeIDTextBox.Text); }
-            catch { MessageBox.Show("Enter a Valid Employee ID"); return; }
 
             int check = controllerObj.approveRefund(orderID, DescriptionTextBox.Text, emid);
             if (check == 0) { MessageBox.Show("Refund not approved. Make sure all the data entered were valid."); }
@@ -44,7 +42,6 @@ namespace DBapplication
                 MessageBox.Show("Refund Approved Successfully");
                 OrderIDTextBox.Text = "";
                 DescriptionTextBox.Text = "";
-                EmployeeIDTextBox.Text = "";
             }
         }
 
