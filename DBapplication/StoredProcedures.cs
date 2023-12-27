@@ -34,6 +34,7 @@ namespace DBapplication
         public static string APPROVEREFUND= "ApproveRefund";
         public static string FINDPRODUCT= "FindProduct";
         public static string GETLOGINROLE = "GETLOGINROLE";
+        public static string ADDNEWUSER = "ADDNEWUSER";
         public static string GETCUSTOMERIDS = "GETCUSTOMERIDS";
         public static string GETEMPLOYEES = "GETEMPLOYEES";
         public static string GETBATCHIDS = "GETBATCHIDS";
@@ -45,6 +46,16 @@ namespace DBapplication
         public static string TOTALEMPLOYEES = "TotalEmployees";
         public static string NEWSUBSCIRBERS = "NewSubscribers";
         public static string NEWCUSTOMERS = "NewCustomers";
-
+        public static string GETPIDS = "GETPIDS";
+        public static string GETTODAYSUBSCRIPTION = "GETTODAYSUBSCRIPTION";
+        public static string GETPRODUCTSINSUBS = "GETPRODUCTSINSUBS";
+        public static string ADDPRODUCTINORDERSUBS = "ADDPRODUCTINORDERSUBS";
+        public static string GETSBATCHID = "GETSBATCHID";
+        public static string GETCUSOFAUBS = "GETCUSOFAUBS";
+        public static string GET0SUBS = "GET0SUBS";
+        public static string GET1SUBS = "GET1SUBS";
+        public static string DEACTIVATESUBS = "DEACTIVATESUBS";
+        public static string ACTIVATESUBS = "ACTIVATESUBS";
+        public static string CHANGEPASSWORD = "CHANGEPASSWORD";
     }
 }

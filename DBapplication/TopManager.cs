@@ -13,10 +13,12 @@ namespace DBapplication
     public partial class TopManager : Form
     {
         StartForm SF;
-        public TopManager(StartForm sf)
+        string ID;
+        public TopManager(StartForm sf, string iD)
         {
             InitializeComponent();
             SF = sf;
+            ID = iD;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,6 +48,37 @@ namespace DBapplication
         private void button5_Click(object sender, EventArgs e)
         {
             DeleteBranch f = new DeleteBranch();
+            f.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UPDATEMANAGER f = new UPDATEMANAGER();
+            f.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            CreateManager f = new CreateManager();
+            f.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AddBranch f = new AddBranch();
+            f.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            UPDATEMANAGER f = new UPDATEMANAGER();
+            f.Show();
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ChangePassword f = new ChangePassword(ID);
             f.Show();
         }
     }
