@@ -72,7 +72,7 @@ namespace DBapplication
             {
                 if (!float.TryParse(textBox3.Text, out y))
                 {
-                    MessageBox.Show("The Salary has to be an float");
+                    MessageBox.Show("The Salary has to be a number");
                     c = false;
                 }
             }

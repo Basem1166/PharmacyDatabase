@@ -40,6 +40,12 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, null);
 
         }
+        public DataTable getproductids()
+        {
+            string SPN = StoredProcedures.GETPRODUCTIDS;
+            return dbMan.ExecuteReader(SPN, null);
+
+        }
         public int insertEmployee(int ID, string Name, float Salary, string Role, string phone, string Address, string Password, int BranchID)
         {
             string SPN = StoredProcedures.ADDEMPLOYEE;
@@ -74,6 +80,14 @@ namespace DBapplication
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@SSN", ID);
             Parameters.Add("@BRANCHID", BranchId);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public int updateprice(int PID, float Price)
+        {
+            string SPN = StoredProcedures.UPDATEPRICE;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PID", PID);
+            Parameters.Add("@NEWPRICE", Price);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
         public int deleteEmployee(int ID)
