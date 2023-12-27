@@ -39,6 +39,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -115,13 +116,13 @@
     <Compile Include="Addproducttoorder.Designer.cs">
       <DependentUpon>Addproducttoorder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller.cs" />
-    <Compile Include="CreateEmployee.cs">
+    <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateEmployee.Designer.cs">
-      <DependentUpon>CreateEmployee.cs</DependentUpon>
+    <Compile Include="ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller.cs" />
     <Compile Include="CreateManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,11 +166,29 @@
     <Compile Include="FireManager.Designer.cs">
       <DependentUpon>FireManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage Subscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Subscriptions.Designer.cs">
+      <DependentUpon>Manage Subscriptions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Manager.Designer.cs">
       <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCustomers.Designer.cs">
+      <DependentUpon>NewCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSubscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewSubscriptions.Designer.cs">
+      <DependentUpon>NewSubscriptions.cs</DependentUpon>
     </Compile>
     <Compile Include="PlaceOrder.cs">
       <SubType>Form</SubType>
@@ -203,6 +222,12 @@
     </Compile>
     <Compile Include="TopManager.Designer.cs">
       <DependentUpon>TopManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TotalEmployees.Designer.cs">
+      <DependentUpon>TotalEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="UPDATEMANAGER.cs">
       <SubType>Form</SubType>
@@ -252,6 +277,9 @@
     <EmbeddedResource Include="ApproveRefund.resx">
       <DependentUpon>ApproveRefund.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateManager.resx">
       <DependentUpon>CreateManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,8 +304,17 @@
     <EmbeddedResource Include="FireManager.resx">
       <DependentUpon>FireManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manage Subscriptions.resx">
+      <DependentUpon>Manage Subscriptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manager.resx">
       <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCustomers.resx">
+      <DependentUpon>NewCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewSubscriptions.resx">
+      <DependentUpon>NewSubscriptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlaceOrder.resx">
       <DependentUpon>PlaceOrder.cs</DependentUpon>
@@ -303,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TopManager.resx">
       <DependentUpon>TopManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalEmployees.resx">
+      <DependentUpon>TotalEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UPDATEMANAGER.resx">
       <DependentUpon>UPDATEMANAGER.cs</DependentUpon>

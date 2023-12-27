@@ -13,10 +13,12 @@ namespace DBapplication
     public partial class Employee : Form
     {
         StartForm SF;
-        public Employee(StartForm sf)
+        string ID;
+        public Employee(StartForm sf, string iD)
         {
             InitializeComponent();
             SF = sf;
+            ID = iD;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,6 +49,30 @@ namespace DBapplication
         {
             AddComplaintOrReview f = new AddComplaintOrReview();
             f.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ChangePassword f = new ChangePassword(ID);
+            f.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddSubscription f = new AddSubscription();
+            f.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            TodaySubscription f = new TodaySubscription();
+            f.Show();
+
         }
     }
 }

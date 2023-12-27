@@ -84,6 +84,24 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, null);
 
         }
+
+        public DataTable newSubscriptions()
+        {
+            string SPN = StoredProcedures.NEWSUBSCIRBERS;
+            return dbMan.ExecuteReader(SPN, null);
+        }
+
+        public DataTable newCustomers()
+        {
+            string SPN = StoredProcedures.NEWCUSTOMERS;
+            return dbMan.ExecuteReader(SPN, null);
+        }
+
+        public DataTable totalEmployees()
+        {
+            string SPN = StoredProcedures.TOTALEMPLOYEES;
+            return dbMan.ExecuteReader(SPN, null);
+        }
         public DataTable getbatchids(int branchid)
         {
             string SPN = StoredProcedures.GETBATCHIDS;
@@ -245,6 +263,7 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, Parameters);
 
         }
+
         public int insertEmployee(int ID, string Name, float Salary, string Role, string phone, string Address, string Password, int BranchID)
         {
             string SPN = StoredProcedures.ADDEMPLOYEE;
@@ -390,7 +409,21 @@ namespace DBapplication
             Parameters.Add("@EmployeeID", employeeID);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
+        public int ChangePassword(string ID, string password, string oldpass)
+        {
+            string SPN = StoredProcedures.CHANGEPASSWORD;
+            
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+                
+            /*@EmployeeID INT,
+              @NewPassword NVARCHAR(10),*/
+            Parameters.Add("@EmployeeID", ID);
+            Parameters.Add("@OldPassword", oldpass);
+            Parameters.Add("@NewPassword", password);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
 
+
+        }
         /*public int CreateUser(string ID,string Name,string Salary, string Role, string PhoneNumber, string Address, string Password, string BranchID)
         {
             DateTime Time = DateTime.Now.Date;
@@ -407,17 +440,17 @@ namespace DBapplication
 
 
         }*/
-        /*EmployeeID INT = NULL,
-/*@EmployeeName NCHAR(30),
-@Salary FLOAT,
-@Role NCHAR(10),
-@PhoneNumber NCHAR(11),
-@Address NCHAR(300),
-@Password NCHAR(10),
-@BranchID INT,
-@Date DATE,
-@Result INT OUTPUT
+            /*EmployeeID INT = NULL,
+    /*@EmployeeName NCHAR(30),
+    @Salary FLOAT,
+    @Role NCHAR(10),
+    @PhoneNumber NCHAR(11),
+    @Address NCHAR(300),
+    @Password NCHAR(10),
+    @BranchID INT,
+    @Date DATE,
+    @Result INT OUTPUT
 
-}*/
+    }*/
+        }
     }
-}
