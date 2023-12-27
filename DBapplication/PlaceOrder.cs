@@ -13,10 +13,14 @@ namespace DBapplication
     public partial class PlaceOrder : Form
     {
         Controller controllerObj;
-        public PlaceOrder()
+        public int emid { get; set; }
+        public int brid { get; set; }
+        public PlaceOrder(int employeeid,int branchid)
         {
             InitializeComponent();
             controllerObj = new Controller();
+            emid = employeeid;
+            brid = branchid;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -63,13 +67,13 @@ namespace DBapplication
             }
             if (c)
             {
-                int f=controllerObj.addorder(x,Convert.ToInt32(comboBox1.SelectedValue),Convert.ToInt32(comboBox2.SelectedValue));
+                int f=controllerObj.addorder(x,emid,Convert.ToInt32(comboBox2.SelectedValue));
                 if (f == 1)
                 {
                     Addproducttoorder a= new Addproducttoorder();
                     a.orderid = x;
                     a.customerid = Convert.ToInt32(comboBox2.SelectedValue);
-                    a.branchid= Convert.ToInt32(comboBox3.SelectedValue);
+                    a.branchid= Convert.ToInt32(brid);
                     a.Show();
                 }
                 else MessageBox.Show("The order ID already exists");

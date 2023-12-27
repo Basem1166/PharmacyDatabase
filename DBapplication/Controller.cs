@@ -424,6 +424,15 @@ namespace DBapplication
 
 
         }
+        public int GetBranchID(string ID)
+        {
+            string SPN = StoredProcedures.GETBRANCHID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+
+            Parameters.Add("@EmployeeID", ID);
+            return (int)dbMan.ExecuteScalar(SPN, Parameters);
+
+        }
 
         public int expiryDiscounts()
         {

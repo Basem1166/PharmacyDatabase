@@ -14,11 +14,15 @@ namespace DBapplication
     {
         StartForm SF;
         string ID;
+        int BranchID;
+        Controller controllerobj;
         public Employee(StartForm sf, string iD)
         {
             InitializeComponent();
             SF = sf;
             ID = iD;
+            controllerobj = new Controller();
+            BranchID = controllerobj.GetBranchID(ID);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +33,7 @@ namespace DBapplication
 
         private void button7_Click(object sender, EventArgs e)
         {
-            PlaceOrder f = new PlaceOrder();
+            PlaceOrder f = new PlaceOrder(int.Parse(ID), BranchID);
             f.Show();
         }
 
@@ -65,12 +69,13 @@ namespace DBapplication
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            Manage_Subscriptions f = new Manage_Subscriptions();
+            f.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            TodaySubscription f = new TodaySubscription();
+            TodaySubscription f = new TodaySubscription(int.Parse(ID),BranchID);
             f.Show();
 
         }

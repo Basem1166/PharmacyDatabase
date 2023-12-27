@@ -57,6 +57,7 @@ namespace DBapplication
         public static string DEACTIVATESUBS = "DEACTIVATESUBS";
         public static string ACTIVATESUBS = "ACTIVATESUBS";
         public static string CHANGEPASSWORD = "CHANGEPASSWORD";
+        public static string GETBRANCHID = "GETBRANCHID";
         public static string EXPIRYDISCOUNTS = "ExpiryDiscounts";
     }
 }

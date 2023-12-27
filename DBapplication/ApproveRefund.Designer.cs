@@ -110,6 +110,7 @@
             this.Controls.Add(this.OrderIDTextBox);
             this.Name = "ApproveRefund";
             this.Text = "ApproveRefund";
+            this.Load += new System.EventHandler(this.ApproveRefund_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

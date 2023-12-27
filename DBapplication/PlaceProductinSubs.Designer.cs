@@ -41,7 +41,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(162, 191);
+            this.button2.Location = new System.Drawing.Point(95, 125);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 37);
             this.button2.TabIndex = 13;
@@ -51,7 +51,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(484, 203);
+            this.button1.Location = new System.Drawing.Point(363, 111);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 41);
             this.button1.TabIndex = 12;
@@ -62,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(499, 114);
+            this.label3.Location = new System.Drawing.Point(432, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 16);
             this.label3.TabIndex = 11;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(547, 70);
+            this.label2.Location = new System.Drawing.Point(480, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 10;
@@ -80,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 70);
+            this.label1.Location = new System.Drawing.Point(92, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 9;
@@ -88,7 +88,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(495, 89);
+            this.textBox1.Location = new System.Drawing.Point(428, 31);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(137, 22);
             this.textBox1.TabIndex = 8;
@@ -96,7 +96,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 89);
+            this.comboBox1.Location = new System.Drawing.Point(51, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(143, 24);
             this.comboBox1.TabIndex = 7;
