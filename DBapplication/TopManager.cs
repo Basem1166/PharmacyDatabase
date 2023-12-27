@@ -60,5 +60,18 @@ namespace DBapplication
             CreateManager f = new CreateManager();
             f.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AddBranch f = new AddBranch();
+            f.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            UPDATEMANAGER f = new UPDATEMANAGER();
+            f.Show();
+
+        }
     }
 }
