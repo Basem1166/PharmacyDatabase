@@ -142,6 +142,15 @@ namespace DBapplication
             Parameters.Add("@AFTER", A);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         } 
+
+        public DataTable findproduct(int productID)
+        {
+            string SPN = StoredProcedures.FINDPRODUCT;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ProductID", productID);
+            return dbMan.ExecuteReader(SPN, Parameters);
+
+        }
         public int insertEmployee(int ID, string Name, float Salary, string Role, string phone, string Address, string Password, int BranchID)
         {
             string SPN = StoredProcedures.ADDEMPLOYEE;
@@ -215,6 +224,71 @@ namespace DBapplication
             Parameters.Add("@CUSTOMERNAME", name);
             Parameters.Add("@ADDRESS", address);
             Parameters.Add("@PHONENUMBER", phonenumber);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+        public string Login(string ID, string Password )
+        {
+            string SPN = StoredProcedures.GETLOGINROLE;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@EmployeeID", ID);
+            Parameters.Add("@Password", Password);
+            return dbMan.ExecuteScalar(SPN, Parameters).ToString();
+
+
+        }
+
+        public int addBranch(float budget, string location, int managerID)
+        {
+            string SPN = StoredProcedures.ADDBRANCH;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Budget", budget);
+            Parameters.Add("@Location", location);
+            Parameters.Add("@EmployeeID", managerID);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+
+        public int deleteBranch(int branchID)
+        {
+            string SPN = StoredProcedures.DELETEBRANCH;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@BranchID", branchID);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+
+        public int addReview(int reviewID, string description, float rating, int customerID, int branchID)
+        {
+            string SPN = StoredProcedures.ADDCOMPLAINT;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ReviewID", reviewID);
+            Parameters.Add("@Description", description);
+            Parameters.Add("@Rating", rating);
+            Parameters.Add("@CustomerID", customerID);
+            Parameters.Add("@BranchId", branchID);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+
+        public int addInBody(int inBodyID, float weight, float height, int age, string gender, float muscleMass, float fatPercent, int cusotmerID)
+        {
+            string SPN = StoredProcedures.ADDINBODY;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@InBodyID", inBodyID);
+            Parameters.Add("@Weight", weight);
+            Parameters.Add("@Height", height);
+            Parameters.Add("@Age", age);
+            Parameters.Add("@Gender", gender);
+            Parameters.Add("@MuscleMass", muscleMass);
+            Parameters.Add("@FatPercent", fatPercent);
+            Parameters.Add("@CustomerID", cusotmerID);
+            return dbMan.ExecuteNonQuery(SPN, Parameters);
+        }
+
+        public int approveRefund(int orderID, string description, int employeeID)
+        {
+            string SPN = StoredProcedures.APPROVEREFUND;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@OrderID", orderID);
+            Parameters.Add("@Description", description);
+            Parameters.Add("@EmployeeID", employeeID);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
 

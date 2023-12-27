@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBranch.Designer.cs">
+      <DependentUpon>AddBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddComplaintOrReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddComplaintOrReview.Designer.cs">
+      <DependentUpon>AddComplaintOrReview.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,11 +73,23 @@
     <Compile Include="AddEmployee.Designer.cs">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddInBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInBody.Designer.cs">
+      <DependentUpon>AddInBody.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddManager.Designer.cs">
       <DependentUpon>AddManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveRefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApproveRefund.Designer.cs">
+      <DependentUpon>ApproveRefund.cs</DependentUpon>
     </Compile>
     <Compile Include="Addproducttoorder.cs">
       <SubType>Form</SubType>
@@ -75,6 +99,24 @@
     </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="DeleteBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBranch.Designer.cs">
+      <DependentUpon>DeleteBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindProduct.Designer.cs">
+      <DependentUpon>FindProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="FireEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +128,12 @@
     </Compile>
     <Compile Include="FireManager.Designer.cs">
       <DependentUpon>FireManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
     </Compile>
     <Compile Include="PlaceOrder.cs">
       <SubType>Form</SubType>
@@ -102,6 +150,12 @@
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StoredProcedures.cs" />
+    <Compile Include="TopManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopManager.Designer.cs">
+      <DependentUpon>TopManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="UPDATEMANAGER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +168,12 @@
     <Compile Include="UpdatePrice.Designer.cs">
       <DependentUpon>UpdatePrice.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddBranch.resx">
+      <DependentUpon>AddBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddComplaintOrReview.resx">
+      <DependentUpon>AddComplaintOrReview.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="ViewProductsInOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,8 +186,23 @@
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddInBody.resx">
+      <DependentUpon>AddInBody.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddManager.resx">
       <DependentUpon>AddManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApproveRefund.resx">
+      <DependentUpon>ApproveRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBranch.resx">
+      <DependentUpon>DeleteBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct.resx">
+      <DependentUpon>FindProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Addproducttoorder.resx">
       <DependentUpon>Addproducttoorder.cs</DependentUpon>
@@ -137,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FireManager.resx">
       <DependentUpon>FireManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlaceOrder.resx">
       <DependentUpon>PlaceOrder.cs</DependentUpon>
@@ -153,6 +231,9 @@
     </Compile>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopManager.resx">
+      <DependentUpon>TopManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UPDATEMANAGER.resx">
       <DependentUpon>UPDATEMANAGER.cs</DependentUpon>

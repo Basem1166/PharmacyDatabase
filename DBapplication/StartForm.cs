@@ -7,20 +7,66 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace DBapplication
 {
     public partial class StartForm : Form
     {
+        Controller controllerobj;
         public StartForm()
         {
             InitializeComponent();
+            controllerobj = new Controller();
         }
 
         private void StartForm_Load(object sender, EventArgs e)
         {
-            PlaceOrder u = new PlaceOrder();
-            u.Show();
+           
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string password = textBox2.Text;
+            string ID = textBox1.Text;
+            
+            string ret = controllerobj.Login(ID,password);
+
+            if (ret == "")
+            {
+                label3.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Login Succesful! Redirecting....");
+                Thread.Sleep(500);
+                if (ret == "Manager   ")
+                {
+                    Manager m = new Manager(this);
+                    m.Show();
+                    this.Hide();
+                }
+                else if (ret == "TopManager")
+                {
+                    TopManager tm = new TopManager(this);
+                    tm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Employee em = new Employee(this);
+                    em.Show();
+                    this.Hide();
+                }
+            }
+
+            
+        }
+
     }
 }
