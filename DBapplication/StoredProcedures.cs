@@ -27,5 +27,6 @@ namespace DBapplication
         public static string GETEMPLOYEEID = "GETEMPLOYEEID";
         public static string GETMANAGERS = "GETMANAGERS";
         public static string GETPRODUCTIDS="GETPRODUCTIDS";
+        public static string GETLOGINROLE = "GETLOGINROLE";
     }
 }

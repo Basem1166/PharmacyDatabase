@@ -114,6 +114,16 @@ namespace DBapplication
             Parameters.Add("@PHONENUMBER", phonenumber);
             return dbMan.ExecuteNonQuery(SPN, Parameters);
         }
+        public string Login(string ID, string Password )
+        {
+            string SPN = StoredProcedures.GETLOGINROLE;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@EmployeeID", ID);
+            Parameters.Add("@Password", Password);
+            return dbMan.ExecuteScalar(SPN, Parameters).ToString();
+
+
+        }
 
     }
 }
