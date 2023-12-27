@@ -24,5 +24,34 @@ namespace DBapplication
             SF.Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddEmployee f = new AddEmployee();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FireEmployee f = new FireEmployee();
+            f.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ApproveRefund f = new ApproveRefund();
+            f.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            UpdatePrice f = new UpdatePrice();
+            f.Show();
+        }
     }
 }

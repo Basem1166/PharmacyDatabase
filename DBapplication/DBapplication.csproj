@@ -116,6 +116,18 @@
       <DependentUpon>Addproducttoorder.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
+    <Compile Include="CreateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEmployee.Designer.cs">
+      <DependentUpon>CreateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateManager.Designer.cs">
+      <DependentUpon>CreateManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBManager.cs" />
     <Compile Include="Deactivate.cs">
       <SubType>Form</SubType>
@@ -239,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApproveRefund.resx">
       <DependentUpon>ApproveRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateManager.resx">
+      <DependentUpon>CreateManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Deactivate.resx">
       <DependentUpon>Deactivate.cs</DependentUpon>

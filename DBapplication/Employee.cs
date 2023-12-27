@@ -24,5 +24,29 @@ namespace DBapplication
             SF.Show();
             this.Close();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            PlaceOrder f = new PlaceOrder();
+            f.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FindProduct f = new FindProduct();
+            f.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddCustomer f = new AddCustomer();
+            f.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddComplaintOrReview f = new AddComplaintOrReview();
+            f.Show();
+        }
     }
 }
