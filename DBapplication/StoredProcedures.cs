@@ -42,5 +42,9 @@ namespace DBapplication
         public static string CALCULATETOTAL = "CALCULATETOTAL";
         public static string GETTIER = "GETTIER";
         public static string GETQUANTITY = "GETQUANTITY";
+        public static string TOTALEMPLOYEES = "TotalEmployees";
+        public static string NEWSUBSCIRBERS = "NewSubscribers";
+        public static string NEWCUSTOMERS = "NewCustomers";
+
     }
 }
