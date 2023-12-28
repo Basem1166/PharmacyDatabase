@@ -561,9 +561,13 @@ namespace DBapplication
 
         public int UpdateBudget(string BranchID , string Budget)
         {
-            string SPN = StoredProcedures.GETBRANCHID;
+            string SPN = StoredProcedures.CHANGEBRANCHBUDGET;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            return 0;
+
+            Parameters.Add("@BranchID", BranchID);
+            Parameters.Add("@NewBudget", Budget);
+
+            return dbMan.ExecuteNonQuery(SPN,Parameters);
 
         }
         /*public int CreateUser(string ID,string Name,string Salary, string Role, string PhoneNumber, string Address, string Password, string BranchID)
