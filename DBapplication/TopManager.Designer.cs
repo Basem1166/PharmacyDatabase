@@ -36,7 +36,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -125,15 +124,6 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(284, 118);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(165, 52);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "Alter Suppliers";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(284, 274);
@@ -156,7 +146,7 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(529, 118);
+            this.button13.Location = new System.Drawing.Point(529, 148);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(165, 52);
             this.button13.TabIndex = 12;
@@ -166,7 +156,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(529, 198);
+            this.button14.Location = new System.Drawing.Point(529, 249);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(165, 52);
             this.button14.TabIndex = 13;
@@ -176,7 +166,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(529, 274);
+            this.button15.Location = new System.Drawing.Point(284, 118);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(165, 52);
             this.button15.TabIndex = 14;
@@ -205,7 +195,6 @@
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
-            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -231,7 +220,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
