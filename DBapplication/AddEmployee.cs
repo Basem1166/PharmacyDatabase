@@ -65,6 +65,11 @@ namespace DBapplication
             bool c = true;
             int x = 0, z;
             float y = 0;
+            if (textBox4.Text == "TopManager" || textBox4.Text == "Manager")
+            {
+                MessageBox.Show("Invalid Role");
+                return;
+            }
             if (textBox1.Text == "")
             {
                 label9.Show();
@@ -150,6 +155,11 @@ namespace DBapplication
                     MessageBox.Show("This ID is already existing");
             }
               
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

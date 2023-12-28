@@ -24,7 +24,7 @@ namespace DBapplication
             label9.Hide();
             label10.Hide();
             label11.Hide();
-            label12.Hide();
+   
             label13.Hide();
             label14.Hide();
             label15.Hide();
@@ -38,13 +38,15 @@ namespace DBapplication
             label9.Hide();
             label10.Hide();
             label11.Hide();
-            label12.Hide();
+
             label13.Hide();
             label14.Hide();
             label15.Hide();
             bool c = true;
             int x=0, z;
             float y = 0;
+
+
             if (textBox1.Text == "")
             {
                 label9.Show();
@@ -76,11 +78,7 @@ namespace DBapplication
                     c = false;
                 }
             }
-            if (textBox4.Text == "")
-            {
-                label12.Show();
-                c = false;
-            }
+
             if (textBox5.Text == "")
             {
                 label13.Show();
@@ -122,7 +120,7 @@ namespace DBapplication
             }
             if (c)
             {
-                int f = controllerObj.insertmanager(x, textBox2.Text, y, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, Convert.ToInt32(comboBox1.SelectedValue));
+                int f = controllerObj.insertmanager(x, textBox2.Text, y, "Manager", textBox5.Text, textBox6.Text, textBox7.Text, Convert.ToInt32(comboBox1.SelectedValue));
                 if (f == 2)
                 {
                     MessageBox.Show("Done");
@@ -130,6 +128,11 @@ namespace DBapplication
                 else
                     MessageBox.Show("This ID is already existing ");
             }
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,11 +16,12 @@ namespace DBapplication
         public Activate()
         {
             InitializeComponent();
-            controllerObj = new Controller();
+            
         }
 
         private void Activate_Load(object sender, EventArgs e)
         {
+            controllerObj = new Controller();
             comboBox1.DataSource = controllerObj.get0subs();
             comboBox1.DisplayMember = "SubscriptionID";
             comboBox1.ValueMember = "SubscriptionID";
