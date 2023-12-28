@@ -24,6 +24,7 @@ namespace DBapplication
             comboBox1.DataSource = controllerObj.get0subs();
             comboBox1.DisplayMember = "SubscriptionID";
             comboBox1.ValueMember = "SubscriptionID";
+            //comment
         }
 
         private void button1_Click(object sender, EventArgs e)
