@@ -39,7 +39,11 @@ namespace DBapplication
                 label3.Visible = true;
                 return;
             }
-            
+
+            int ret = controllerObj.UpdateBudget(comboBox1.SelectedValue.ToString(), newBudget);
+
+            if (ret == 1)
+                MessageBox.Show("Budget Updated Successfully!");
 
         }
 

@@ -85,6 +85,7 @@ namespace DBapplication
         private void button12_Click(object sender, EventArgs e)
         {
             UpdateBranchBudget f = new UpdateBranchBudget();
+            f.Show();
         }
     }
 }
