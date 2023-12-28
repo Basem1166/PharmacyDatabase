@@ -87,5 +87,34 @@ namespace DBapplication
             UpdateBranchBudget f = new UpdateBranchBudget();
             f.Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            AddSup f = new AddSup();
+            f.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            DelSup f = new DelSup();
+            f.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Reports f = new Reports();
+            f.Show();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Reviews f = new Reviews();
+            f.Show();
+        }
+
+        private void TopManager_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

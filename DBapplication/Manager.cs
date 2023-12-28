@@ -66,5 +66,17 @@ namespace DBapplication
             ChangePassword f = new ChangePassword(ID);
             f.Show();
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            AddProduct f = new AddProduct();
+            f.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Restock f = new Restock(BranchID);
+            f.Show();
+        }
     }
 }

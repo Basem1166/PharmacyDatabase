@@ -13,10 +13,11 @@ namespace DBapplication
     public partial class Restock : Form
     {
         Controller controller = new Controller();
-        public Restock()
+        int BranchID;
+        public Restock(int branchID)
         {
             InitializeComponent();
-
+            BranchID = branchID;
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -74,7 +75,7 @@ namespace DBapplication
                 label9.Hide();
             if(t1 && t2 && t3 && t4)
             {
-                int x = controller.Restock(textBox1.Text, comboBox2.SelectedValue.ToString(), textBox2.Text, textBox3.Text, comboBox1.SelectedValue.ToString(), textBox4.Text);
+                int x = controller.Restock(textBox1.Text, comboBox2.SelectedValue.ToString(), textBox2.Text, textBox3.Text, BranchID, textBox4.Text);
                 if(x == 1)
                 {
                     MessageBox.Show("Restock Successful", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -91,6 +92,11 @@ namespace DBapplication
         }
 
         private void Restock_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

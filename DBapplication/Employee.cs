@@ -79,5 +79,17 @@ namespace DBapplication
             f.Show();
 
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ViewInBody f = new ViewInBody();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddInBody f = new AddInBody();
+            f.Show();
+        }
     }
 }
