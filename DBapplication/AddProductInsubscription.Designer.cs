@@ -39,9 +39,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(61, 302);
+            this.button2.Location = new System.Drawing.Point(46, 245);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 37);
+            this.button2.Size = new System.Drawing.Size(169, 30);
             this.button2.TabIndex = 13;
             this.button2.Text = "Add Subscription";
             this.button2.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(545, 298);
+            this.button1.Location = new System.Drawing.Point(409, 242);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 41);
+            this.button1.Size = new System.Drawing.Size(111, 33);
             this.button1.TabIndex = 12;
             this.button1.Text = "Add another product";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,51 +62,57 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(485, 116);
+            this.label3.Location = new System.Drawing.Point(364, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 16);
+            this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "The quantity is empty";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(533, 72);
+            this.label2.Location = new System.Drawing.Point(400, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 16);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Quantity";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 72);
+            this.label1.Location = new System.Drawing.Point(109, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 16);
+            this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "PID";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(481, 91);
+            this.textBox1.Location = new System.Drawing.Point(361, 74);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 22);
+            this.textBox1.Size = new System.Drawing.Size(104, 20);
             this.textBox1.TabIndex = 8;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(104, 91);
+            this.comboBox1.Location = new System.Drawing.Point(78, 74);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 24);
+            this.comboBox1.Size = new System.Drawing.Size(108, 21);
             this.comboBox1.TabIndex = 7;
             // 
             // AddProductInsubscription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
@@ -112,6 +120,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddProductInsubscription";
             this.Text = "AddProductInsubscription";
             this.Load += new System.EventHandler(this.AddProductInsubscription_Load);

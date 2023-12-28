@@ -41,9 +41,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(95, 125);
+            this.button2.Location = new System.Drawing.Point(71, 102);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 37);
+            this.button2.Size = new System.Drawing.Size(106, 30);
             this.button2.TabIndex = 13;
             this.button2.Text = "Place subscription";
             this.button2.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(363, 111);
+            this.button1.Location = new System.Drawing.Point(272, 90);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 41);
+            this.button1.Size = new System.Drawing.Size(111, 33);
             this.button1.TabIndex = 12;
             this.button1.Text = "Add another product";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,60 +64,67 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(432, 56);
+            this.label3.Location = new System.Drawing.Point(324, 46);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 16);
+            this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "The quantity is empty";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(480, 12);
+            this.label2.Location = new System.Drawing.Point(360, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 16);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Quantity";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 12);
+            this.label1.Location = new System.Drawing.Point(69, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "BatchID";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(428, 31);
+            this.textBox1.Location = new System.Drawing.Point(321, 25);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 22);
+            this.textBox1.Size = new System.Drawing.Size(104, 20);
             this.textBox1.TabIndex = 8;
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(51, 31);
+            this.comboBox1.Location = new System.Drawing.Point(38, 25);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 24);
+            this.comboBox1.Size = new System.Drawing.Size(108, 21);
             this.comboBox1.TabIndex = 7;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 288);
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 234);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(799, 159);
+            this.dataGridView1.Size = new System.Drawing.Size(599, 129);
             this.dataGridView1.TabIndex = 14;
             // 
             // PlaceProductinSubs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -124,6 +133,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PlaceProductinSubs";
             this.Text = "PlaceProductinSubs";
             this.Load += new System.EventHandler(this.PlaceProductinSubs_Load);

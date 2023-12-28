@@ -45,7 +45,7 @@ namespace DBapplication
 
 
 
-            if (!int.TryParse(ID, out int id) && id >= 0)
+            if (!int.TryParse(ID, out int id) || id < 0)
             {
                 label9.Visible = true;
                 return;
@@ -55,12 +55,12 @@ namespace DBapplication
                 label10.Visible = true;
                 return;
             }
-            if (!int.TryParse(salary, out int s) && s >= 0)
+            if (!int.TryParse(salary, out int s) || s < 0)
             {
                 label11.Visible = true;
                 return;
             }
-            if(!ulong.TryParse(phoneNumber, out _))
+            if(!ulong.TryParse(phoneNumber, out ulong n) || n < 0)
             {
                 label12.Visible = true;
                 return;
