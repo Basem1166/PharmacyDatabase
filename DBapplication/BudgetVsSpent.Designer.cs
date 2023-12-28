@@ -62,6 +62,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "BudgetVsSpent";
             this.Text = "BudgetVsSpent";
+            this.Load += new System.EventHandler(this.BudgetVsSpent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

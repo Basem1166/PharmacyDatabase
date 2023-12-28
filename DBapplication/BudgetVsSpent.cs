@@ -26,5 +26,10 @@ namespace DBapplication
             dataGridView1.Refresh();
 
         }
+
+        private void BudgetVsSpent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

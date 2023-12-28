@@ -16,12 +16,12 @@ namespace DBapplication
         public DailyReport()
         {
             InitializeComponent();
-            label9.Hide();
+
         }
 
         private void DailyReport_Load(object sender, EventArgs e)
         {
-
+            label9.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

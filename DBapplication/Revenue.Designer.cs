@@ -93,6 +93,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Revenue";
             this.Text = "Revenue";
+            this.Load += new System.EventHandler(this.Revenue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

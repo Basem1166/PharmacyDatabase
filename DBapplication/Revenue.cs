@@ -17,7 +17,7 @@ namespace DBapplication
         public Revenue()
         {
             InitializeComponent();
-            label6.Hide();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,6 +37,11 @@ namespace DBapplication
                 dataGridView1.DataSource = dt;
                 dataGridView1.Refresh();
             }
+        }
+
+        private void Revenue_Load(object sender, EventArgs e)
+        {
+            label6.Hide();
         }
     }
 }

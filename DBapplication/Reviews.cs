@@ -17,17 +17,17 @@ namespace DBapplication
         public Reviews()
         {
             InitializeComponent();
+
+        }
+
+        private void Reviews_Load(object sender, EventArgs e)
+        {
             comboBox1.DataSource = controller.GetBranches();
             comboBox1.DisplayMember = "BranchID";
             comboBox1.ValueMember = "BranchID";
             label6.Hide();
             label2.Hide();
             label4.Hide();
-        }
-
-        private void Reviews_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -49,13 +49,16 @@ namespace DBapplication
             }
             else
                 label4.Hide();
-            if(Convert.ToSingle(textBox1.Text) > Convert.ToSingle(textBox2.Text))
+            if(t1 && t2)
             {
-                label2.Show();
-                t3 = false;
+                if (Convert.ToSingle(textBox1.Text) > Convert.ToSingle(textBox2.Text))
+                {
+                    label2.Show();
+                    t3 = false;
+                }
+                else
+                    label2.Hide();
             }
-            else
-                label2.Hide();
             if(t1 && t2 && t3)
             {
                 DataTable dt = new DataTable();

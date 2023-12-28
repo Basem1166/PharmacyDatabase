@@ -23,13 +23,7 @@ namespace DBapplication
         private void Form1_Activated(object sender, EventArgs e)
         {
             
-            comboBox2.DataSource = controller.GetProducts();
-            comboBox2.DisplayMember = "Pname";
-            comboBox2.ValueMember = "PID";
-            label6.Hide();
-            label7.Hide();
-            label9.Hide();
-            label4.Hide();
+
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -43,21 +37,21 @@ namespace DBapplication
             bool t2 = true;
             bool t3 = true;
             bool t4 = true;
-            if (!int.TryParse(textBox1.Text, out _) || string.IsNullOrWhiteSpace(textBox1.Text))
+            if (!int.TryParse(textBox1.Text, out _) || string.IsNullOrWhiteSpace(textBox1.Text) || Convert.ToInt32(textBox1.Text) < 0)
             {
                 label6.Show();
                 t1 = false;
             }
             else
                 label6.Hide() ;
-            if (!float.TryParse(textBox3.Text, out _) || string.IsNullOrWhiteSpace(textBox3.Text))
+            if (!float.TryParse(textBox3.Text, out _) || string.IsNullOrWhiteSpace(textBox3.Text) || Convert.ToSingle(textBox3.Text) < 0)
             {
                 label7.Show();
                 t2 = false;
             }
             else
                 label7.Hide();
-            if (!int.TryParse(textBox2.Text, out _) || string.IsNullOrWhiteSpace(textBox2.Text) || Convert.ToInt32(textBox2.Text) == 0)
+            if (!int.TryParse(textBox2.Text, out _) || string.IsNullOrWhiteSpace(textBox2.Text) || Convert.ToInt32(textBox2.Text) <= 0)
             {
                 label4.Show();
                 t3 = false;
@@ -91,7 +85,13 @@ namespace DBapplication
 
         private void Restock_Load(object sender, EventArgs e)
         {
-
+            comboBox2.DataSource = controller.GetProducts();
+            comboBox2.DisplayMember = "Pname";
+            comboBox2.ValueMember = "PID";
+            label6.Hide();
+            label7.Hide();
+            label9.Hide();
+            label4.Hide();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

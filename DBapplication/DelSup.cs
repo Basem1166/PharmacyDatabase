@@ -17,9 +17,7 @@ namespace DBapplication
         public DelSup()
         {
             InitializeComponent();
-            comboBox1.DataSource = controller.GetSup();
-            comboBox1.DisplayMember = "SupplierName";
-            comboBox1.ValueMember = "SupplierName";
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +38,9 @@ namespace DBapplication
 
         private void DelSup_Load(object sender, EventArgs e)
         {
-
+            comboBox1.DataSource = controller.GetSup();
+            comboBox1.DisplayMember = "SupplierName";
+            comboBox1.ValueMember = "SupplierName";
         }
     }
 }

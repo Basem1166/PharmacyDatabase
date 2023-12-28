@@ -16,12 +16,6 @@ namespace DBapplication
         public AddProduct()
         {
             InitializeComponent();
-            comboBox1.DataSource = controller.GetSup();
-            comboBox1.DisplayMember = "SupplierName";
-            comboBox1.ValueMember = "SupplierID";
-            label6.Hide();
-            label7.Hide();
-            label9.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,14 +23,14 @@ namespace DBapplication
             bool t1 = true;
             bool t2 = true;
             bool t3 = true;
-            if (!int.TryParse(textBox1.Text, out _) || string.IsNullOrWhiteSpace(textBox1.Text))
+            if (!int.TryParse(textBox1.Text, out _) || string.IsNullOrWhiteSpace(textBox1.Text) || Convert.ToInt32(textBox1.Text) < 0)
             {
                 label6.Show();
                 t1 = false;
             }
             else
                 label6.Hide();
-            if (!float.TryParse(textBox3.Text, out _) || string.IsNullOrWhiteSpace(textBox3.Text))
+            if (!float.TryParse(textBox3.Text, out _) || string.IsNullOrWhiteSpace(textBox3.Text) || Convert.ToInt32(textBox3.Text) <= 0)
             {
                 label7.Show();
                 t2 = false;
@@ -69,7 +63,12 @@ namespace DBapplication
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
-
+            comboBox1.DataSource = controller.GetSup();
+            comboBox1.DisplayMember = "SupplierName";
+            comboBox1.ValueMember = "SupplierID";
+            label6.Hide();
+            label7.Hide();
+            label9.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

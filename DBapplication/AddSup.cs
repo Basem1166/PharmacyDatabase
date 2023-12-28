@@ -19,9 +19,6 @@ namespace DBapplication
         public AddSup()
         {
             InitializeComponent();
-            label6.Hide();
-            label9.Hide();
-            label3.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,7 +31,7 @@ namespace DBapplication
             bool t1 = true;
             bool t2 = true;
             bool t3 = true;
-            if (!int.TryParse(textBox1.Text, out _) || string.IsNullOrWhiteSpace(textBox1.Text))
+            if (!int.TryParse(textBox1.Text, out _) || string.IsNullOrWhiteSpace(textBox1.Text) || Convert.ToInt32(textBox1.Text) < 0)
             {
                 label6.Show();
                 t1 = false;
@@ -70,7 +67,9 @@ namespace DBapplication
 
         private void AddSup_Load(object sender, EventArgs e)
         {
-
+            label6.Hide();
+            label9.Hide();
+            label3.Hide();
         }
     }
 }

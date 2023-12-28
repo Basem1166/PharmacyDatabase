@@ -16,14 +16,14 @@ namespace DBapplication
         public ViewInBody()
         {
             InitializeComponent();
-            comboBox1.DataSource = controller.GetCustomers();
-            comboBox1.DisplayMember = "CustomerID";
-            comboBox1.ValueMember = "CustomerID";
+
         }
 
         private void ViewInBody_Load(object sender, EventArgs e)
         {
-
+            comboBox1.DataSource = controller.GetCustomers();
+            comboBox1.DisplayMember = "CustomerID";
+            comboBox1.ValueMember = "CustomerID";
         }
 
         private void button1_Click(object sender, EventArgs e)
