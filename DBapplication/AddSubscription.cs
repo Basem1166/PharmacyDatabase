@@ -53,6 +53,14 @@ namespace DBapplication
                     MessageBox.Show("The Subscribtion has to be an integer");
                     c = false;
                 }
+                else
+                {
+                    if (x < 0)
+                    {
+                        MessageBox.Show("The Subscribtion has to be positive");
+                        c = false;
+                    }
+                }
             }
             if (textBox2.Text == "")
             {
@@ -65,6 +73,14 @@ namespace DBapplication
                 {
                     MessageBox.Show("The interval has to be an integer");
                     c = false;
+                }
+                else
+                {
+                    if (y < 0)
+                    {
+                        MessageBox.Show("The interval has to be postive");
+                        c = false;
+                    }
                 }
             }
             if (textBox3.Text == "")

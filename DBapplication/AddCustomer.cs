@@ -61,16 +61,33 @@ namespace DBapplication
                 label9.Show();
                 c = false;
             }
-            int x, y;
+            int x;
+            ulong y;
             if (!int.TryParse(textBox1.Text, out x))
             {
                 MessageBox.Show("The Customer ID has to be an integer");
                 c = false;
             }
-            if (!int.TryParse(textBox4.Text, out y))
+            else
+            {
+                if (x < 0)
+                {
+                    MessageBox.Show("The ID has to be an positive");
+                    c = false;
+                }
+            }
+            if (!ulong.TryParse(textBox4.Text, out y))
             {
                 MessageBox.Show("The Phone number has to be an integer");
                 c = false;
+            }
+            else
+            {
+                if (y < 0)
+                {
+                    MessageBox.Show("The Phone number has to be an positive");
+                    c = false;
+                }
             }
             if (textBox4.Text.Length != 11)
             {

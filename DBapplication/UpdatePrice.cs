@@ -44,6 +44,14 @@ namespace DBapplication
                     MessageBox.Show("The price has to be a number");
                     c = false;
                 }
+                else
+                {
+                    if (x < 0)
+                    {
+                        MessageBox.Show("The price has to be positive");
+                        c = false;
+                    }
+                }
             }
             if (c)
             {

@@ -58,6 +58,14 @@ namespace DBapplication
                     MessageBox.Show("The OrderID has to be a number");
                     c = false;
                 }
+                else
+                {
+                    if(x< 0)
+                    {
+                        MessageBox.Show("The OrderID has to be positive");
+                        c = false;
+                    }
+                }
             }
             if (c)
             {

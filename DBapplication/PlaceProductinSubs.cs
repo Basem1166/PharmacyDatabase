@@ -52,6 +52,14 @@ namespace DBapplication
                     MessageBox.Show("The Quantity has to be a number");
                     c = false;
                 }
+                else
+                {
+                    if(x< 0)
+                    {
+                        MessageBox.Show("The Quantity has to be positive");
+                        c = false;
+                    }
+                }
             }
             if (c)
             {
@@ -90,6 +98,14 @@ namespace DBapplication
                 {
                     MessageBox.Show("The Quantity has to be a number");
                     c = false;
+                }
+                else
+                {
+                    if(x< 0)
+                    {
+                        MessageBox.Show("The Quantity has to be positive");
+                        c = false;
+                    }
                 }
             }
             if (c)

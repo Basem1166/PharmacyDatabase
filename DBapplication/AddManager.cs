@@ -43,7 +43,8 @@ namespace DBapplication
             label14.Hide();
             label15.Hide();
             bool c = true;
-            int x=0, z;
+            int x = 0;
+            ulong z=0;
             float y = 0;
 
 
@@ -58,6 +59,14 @@ namespace DBapplication
                 {
                     MessageBox.Show("The Manager ID has to be an integer");
                     c = false;
+                }
+                else
+                {
+                    if (x < 0)
+                    {
+                        MessageBox.Show("The ID has to be positive");
+                        c = false;
+                    }
                 }
             }
             if (textBox2.Text == "")
@@ -77,6 +86,14 @@ namespace DBapplication
                     MessageBox.Show("The Salary has to be a number");
                     c = false;
                 }
+                else
+                {
+                    if (y < 0)
+                    {
+                        MessageBox.Show("The Salary has to be positive");
+                        c = false;
+                    }
+                }
             }
 
             if (textBox5.Text == "")
@@ -86,7 +103,7 @@ namespace DBapplication
             }
             else
             {
-                if (!int.TryParse(textBox5.Text, out z))
+                if (!ulong.TryParse(textBox5.Text, out z))
                 {
                     MessageBox.Show("The Phone Number has to be an integer");
                     c = false;
@@ -97,6 +114,14 @@ namespace DBapplication
                     {
                         MessageBox.Show("The Phone number has to be 11 number");
                         c = false;
+                    }
+                    else
+                    {
+                        if (z < 0)
+                        {
+                            MessageBox.Show("The Phone number has to be positive");
+                            c = false;
+                        }
                     }
                 }
             }
