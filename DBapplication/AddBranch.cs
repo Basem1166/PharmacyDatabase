@@ -87,5 +87,10 @@ namespace DBapplication
         {
 
         }
+
+        private void AddBranch_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

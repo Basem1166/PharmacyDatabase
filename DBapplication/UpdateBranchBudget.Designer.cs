@@ -89,6 +89,7 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "New Budget must be a positive Integer!";
             this.label3.Visible = false;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // UpdateBranchBudget
             // 

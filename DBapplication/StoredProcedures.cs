@@ -59,5 +59,8 @@ namespace DBapplication
         public static string CHANGEPASSWORD = "CHANGEPASSWORD";
         public static string GETBRANCHID = "GETBRANCHID";
         public static string EXPIRYDISCOUNTS = "ExpiryDiscounts";
+        public static string CHANGEBRANCHBUDGET = "CHANGEBRANCHBUDGET";
+        public static string ADDPRODUCT = "ADDPRODUCT";
+        public static string GetSup = "GETSUP";
     }
 }

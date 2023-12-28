@@ -19,6 +19,24 @@ namespace DBapplication
             dbMan = new DBManager();
         }
 
+        public DataTable GetSup()
+        {
+            string procedurename = StoredProcedures.GetSup;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+        public int AddProduct(string pid, string pname, string price, string pres, string sid)
+        {
+            string procedurename = StoredProcedures.ADDPRODUCT;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@pid", pid);
+            parameters.Add("@pname", pname);
+            parameters.Add("@price", price);
+            parameters.Add("@pres", pres);
+            parameters.Add("@sid", sid);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(procedurename, parameters));
+            return x;
+        }
 
         public void TerminateConnection()
         {
@@ -438,6 +456,14 @@ namespace DBapplication
         {
             string SPN = StoredProcedures.EXPIRYDISCOUNTS;
             return dbMan.ExecuteNonQuery(SPN, null);
+        }
+
+        public int UpdateBudget(string BranchID , string Budget)
+        {
+            string SPN = StoredProcedures.GETBRANCHID;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            return 0;
+
         }
         /*public int CreateUser(string ID,string Name,string Salary, string Role, string PhoneNumber, string Address, string Password, string BranchID)
         {
