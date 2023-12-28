@@ -23,7 +23,7 @@ namespace DBapplication
 
         private void StartForm_Load(object sender, EventArgs e)
         {
-            int r = controllerobj.expiryDiscounts();
+            //int r = controllerobj.expiryDiscounts();
         }
 
         private void label1_Click(object sender, EventArgs e)

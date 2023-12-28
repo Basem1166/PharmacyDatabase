@@ -15,7 +15,7 @@ namespace DBapplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TotalEmployees());
+            Application.Run(new StartForm());
         }
     }
 }

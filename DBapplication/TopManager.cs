@@ -81,5 +81,10 @@ namespace DBapplication
             ChangePassword f = new ChangePassword(ID);
             f.Show();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            UpdateBranchBudget f = new UpdateBranchBudget();
+        }
     }
 }

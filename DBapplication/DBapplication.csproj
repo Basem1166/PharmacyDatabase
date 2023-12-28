@@ -229,6 +229,12 @@
     <Compile Include="TotalEmployees.Designer.cs">
       <DependentUpon>TotalEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateBranchBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBranchBudget.Designer.cs">
+      <DependentUpon>UpdateBranchBudget.cs</DependentUpon>
+    </Compile>
     <Compile Include="UPDATEMANAGER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TotalEmployees.resx">
       <DependentUpon>TotalEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBranchBudget.resx">
+      <DependentUpon>UpdateBranchBudget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UPDATEMANAGER.resx">
       <DependentUpon>UPDATEMANAGER.cs</DependentUpon>
