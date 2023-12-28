@@ -161,6 +161,12 @@ namespace DBapplication
             return dbMan.ExecuteReader(SPN, null);
 
         }
+
+        public DataTable branchPerformance()
+        {
+            string SPN = StoredProcedures.BRANCHPERFORMANCE;
+            return dbMan.ExecuteReader(SPN, null);
+        }
         public DataTable getSubscriptionID()
         {
             string SPN = StoredProcedures.GETTODAYSUBSCRIPTION;

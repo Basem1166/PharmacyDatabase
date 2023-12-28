@@ -73,5 +73,6 @@ namespace DBapplication
         public static string GetBranches = "GetBranches";
         public static string GetProducts = "GetProducts";
         public static string GetCustomers = "GetCustomers";
+        public static string BRANCHPERFORMANCE = "BranchPerformance";
     }
 }
