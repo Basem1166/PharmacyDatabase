@@ -553,10 +553,10 @@ namespace DBapplication
 
         }
 
-        public int expiryDiscounts()
+        public void expiryDiscounts()
         {
             string SPN = StoredProcedures.EXPIRYDISCOUNTS;
-            return dbMan.ExecuteNonQuery(SPN, null);
+            dbMan.ExecuteReader(SPN, null);
         }
 
         public int UpdateBudget(string BranchID , string Budget)

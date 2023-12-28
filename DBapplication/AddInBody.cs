@@ -67,7 +67,7 @@ namespace DBapplication
                 if (check == 0) { MessageBox.Show("Review not added. Make sure all the data entered were valid."); }
                 else
                 { 
-                    MessageBox.Show("Review Added Successfully");
+                    MessageBox.Show("InBody Data Added Successfully");
                     InbodyIDTextBox.Text = "";
                     WeightTextBox.Text = "";
                     HeightTextBox.Text = "";
