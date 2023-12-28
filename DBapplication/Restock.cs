@@ -22,9 +22,7 @@ namespace DBapplication
 
         private void Form1_Activated(object sender, EventArgs e)
         {
-            comboBox1.DataSource = controller.GetBranches();
-            comboBox1.DisplayMember = "BranchID";
-            comboBox1.ValueMember = "BranchID";
+            
             comboBox2.DataSource = controller.GetProducts();
             comboBox2.DisplayMember = "Pname";
             comboBox2.ValueMember = "PID";
@@ -75,7 +73,7 @@ namespace DBapplication
                 label9.Hide();
             if(t1 && t2 && t3 && t4)
             {
-                int x = controller.Restock(textBox1.Text, comboBox2.SelectedValue.ToString(), textBox2.Text, textBox3.Text, BranchID, textBox4.Text);
+                int x = controller.Restock(textBox1.Text, comboBox2.SelectedValue.ToString(), textBox2.Text, textBox3.Text, BranchID.ToString(), textBox4.Text);
                 if(x == 1)
                 {
                     MessageBox.Show("Restock Successful", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
