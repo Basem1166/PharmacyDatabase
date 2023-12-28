@@ -52,5 +52,11 @@ namespace DBapplication
             TotalEmployees f = new TotalEmployees();
             f.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            BranchPerformance f = new BranchPerformance();
+            f.Show();
+        }
     }
 }
