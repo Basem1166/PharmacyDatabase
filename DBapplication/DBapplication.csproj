@@ -110,6 +110,12 @@
     <Compile Include="AddSubscription.Designer.cs">
       <DependentUpon>AddSubscription.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddSup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSup.Designer.cs">
+      <DependentUpon>AddSup.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApproveRefund.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="Addproducttoorder.Designer.cs">
       <DependentUpon>Addproducttoorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetVsSpent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BudgetVsSpent.Designer.cs">
+      <DependentUpon>BudgetVsSpent.cs</DependentUpon>
     </Compile>
     <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
@@ -135,6 +147,12 @@
     <Compile Include="CreateManager.Designer.cs">
       <DependentUpon>CreateManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="DailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyReport.Designer.cs">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBManager.cs" />
     <Compile Include="Deactivate.cs">
       <SubType>Form</SubType>
@@ -147,6 +165,12 @@
     </Compile>
     <Compile Include="DeleteBranch.Designer.cs">
       <DependentUpon>DeleteBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DelSup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelSup.Designer.cs">
+      <DependentUpon>DelSup.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
       <SubType>Form</SubType>
@@ -210,6 +234,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restock.Designer.cs">
+      <DependentUpon>Restock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revenue.Designer.cs">
+      <DependentUpon>Revenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reviews.Designer.cs">
+      <DependentUpon>Reviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +304,12 @@
     <EmbeddedResource Include="AddComplaintOrReview.resx">
       <DependentUpon>AddComplaintOrReview.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="ViewInBody.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewInBody.Designer.cs">
+      <DependentUpon>ViewInBody.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewProductsInOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,8 +337,14 @@
     <EmbeddedResource Include="AddSubscription.resx">
       <DependentUpon>AddSubscription.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddSup.resx">
+      <DependentUpon>AddSup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApproveRefund.resx">
       <DependentUpon>ApproveRefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudgetVsSpent.resx">
+      <DependentUpon>BudgetVsSpent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
@@ -298,11 +352,17 @@
     <EmbeddedResource Include="CreateManager.resx">
       <DependentUpon>CreateManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DailyReport.resx">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Deactivate.resx">
       <DependentUpon>Deactivate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteBranch.resx">
       <DependentUpon>DeleteBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelSup.resx">
+      <DependentUpon>DelSup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
@@ -347,6 +407,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Restock.resx">
+      <DependentUpon>Restock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revenue.resx">
+      <DependentUpon>Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reviews.resx">
+      <DependentUpon>Reviews.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,6 +436,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePrice.resx">
       <DependentUpon>UpdatePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewInBody.resx">
+      <DependentUpon>ViewInBody.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewProductsInOrder.resx">
       <DependentUpon>ViewProductsInOrder.cs</DependentUpon>

@@ -60,7 +60,18 @@ namespace DBapplication
         public static string GETBRANCHID = "GETBRANCHID";
         public static string EXPIRYDISCOUNTS = "ExpiryDiscounts";
         public static string CHANGEBRANCHBUDGET = "CHANGEBRANCHBUDGET";
-        public static string ADDPRODUCT = "ADDPRODUCT";
-        public static string GetSup = "GETSUP";
+        public static string AddProduct = "AddProduct";
+        public static string AddSup = "AddSup";
+        public static string BudgetvSpent = "BudgetvSpent";
+        public static string DailyReport = "DailyReport";
+        public static string DelSup = "DelSup";
+        public static string Restock = "Restock";
+        public static string Revenue = "Revenue";
+        public static string Reviews = "Reviews";
+        public static string ViewInBody = "ViewInBody";
+        public static string GetSup = "GetSup";
+        public static string GetBranches = "GetBranches";
+        public static string GetProducts = "GetProducts";
+        public static string GetCustomers = "GetCustomers";
     }
 }

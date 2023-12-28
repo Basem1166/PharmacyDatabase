@@ -19,15 +19,9 @@ namespace DBapplication
             dbMan = new DBManager();
         }
 
-        public DataTable GetSup()
-        {
-            string procedurename = StoredProcedures.GetSup;
-            Dictionary<string, object> parameters = new Dictionary<string, object>();
-            return dbMan.ExecuteReader(procedurename, parameters);
-        }
         public int AddProduct(string pid, string pname, string price, string pres, string sid)
         {
-            string procedurename = StoredProcedures.ADDPRODUCT;
+            string procedurename = StoredProcedures.AddProduct;
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@pid", pid);
             parameters.Add("@pname", pname);
@@ -36,6 +30,113 @@ namespace DBapplication
             parameters.Add("@sid", sid);
             int x = Convert.ToInt32(dbMan.ExecuteScalar(procedurename, parameters));
             return x;
+        }
+
+        public int AddSup(string supid, string supname, string supcity)
+        {
+            string procedurename = StoredProcedures.AddSup;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@supid", supid);
+            parameters.Add("@supcity", supcity);
+            parameters.Add("@supname", supname);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(procedurename, parameters));
+            return x;
+        }
+
+
+        public bool DelSup(string supname)
+        {
+            string procedurename = StoredProcedures.DelSup;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@supname", supname);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(procedurename, parameters));
+            if (x == 1)
+                return true;
+            else
+                return false;
+        }
+
+        public int Restock(string id, string pid, string qty, string off, string bid, string expdate)
+        {
+            string procedurename = StoredProcedures.Restock;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@id", id);
+            parameters.Add("@pid", pid);
+            parameters.Add("@qty", qty);
+            parameters.Add("@off", off);
+            parameters.Add("@bid", bid);
+            parameters.Add("@expdate", expdate);
+            int x = Convert.ToInt32(dbMan.ExecuteScalar(procedurename, parameters));
+            return x;
+        }
+
+        public DataTable Reviews(string bid, string rating1, string rating2)
+        {
+            string procedurename = StoredProcedures.Reviews;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@rating1", rating1);
+            parameters.Add("@rating2", rating2);
+            parameters.Add("@bid", bid);
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+
+        public DataTable ViewInBody(string cid)
+        {
+            string procedurename = StoredProcedures.ViewInBody;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@cid", cid);
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+
+        public DataTable DailyReport(string date)
+        {
+            string procedurename = StoredProcedures.DailyReport;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@date", date);
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+
+        public DataTable Revenue(string year)
+        {
+            string procedurename = StoredProcedures.Revenue;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@year", year);
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+
+        public DataTable BudgetvSpent()
+        {
+            string procedurename = StoredProcedures.BudgetvSpent;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+
+        public DataTable GetSup()
+        {
+            string procedurename = StoredProcedures.GetSup;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+
+        public DataTable GetBranches()
+        {
+            string procedurename = StoredProcedures.GetBranches;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+
+        public DataTable GetProducts()
+        {
+            string procedurename = StoredProcedures.GetProducts;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(procedurename, parameters);
+        }
+
+        public DataTable GetCustomers()
+        {
+            string procedurename = StoredProcedures.GetCustomers;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            return dbMan.ExecuteReader(procedurename, parameters);
         }
 
         public void TerminateConnection()
