@@ -549,7 +549,10 @@ namespace DBapplication
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
 
             Parameters.Add("@EmployeeID", ID);
-            return (int)dbMan.ExecuteScalar(SPN, Parameters);
+            if (dbMan.ExecuteScalar(SPN, Parameters) == DBNull.Value)
+                return 0;
+            else
+                return (int)(dbMan.ExecuteScalar(SPN, Parameters));
 
         }
 

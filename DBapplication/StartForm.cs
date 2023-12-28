@@ -45,10 +45,16 @@ namespace DBapplication
             }
             else
             {
+                
                 MessageBox.Show("Login Succesful! Redirecting....");
                 Thread.Sleep(500);
                 if (ret == "Manager   ")
                 {
+                    if(controllerobj.GetBranchID(ID) == 0)
+                    {
+                        MessageBox.Show("Branch Deleted Please Refer To your supervisor to assign you a new Branch!");
+                        return;
+                    }
                     Manager m = new Manager(this,ID);
                     m.Show();
                     this.Hide();
@@ -61,6 +67,11 @@ namespace DBapplication
                 }
                 else
                 {
+                    if (controllerobj.GetBranchID(ID) == 0)
+                    {
+                        MessageBox.Show("Branch Deleted Please Refer To your supervisor to assign you a new Branch!");
+                        return;
+                    }
                     Employee em = new Employee(this,ID);
                     em.Show();
                     this.Hide();
